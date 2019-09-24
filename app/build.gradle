@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "luyao.wanandroid"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha08'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-alpha-3'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1183_43604_sharewithdownload_withoutGame_obfs_20180211_105126.jar')
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'q.rorbin:VerticalTabLayout:1.2.5'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    implementation 'de.psdev.licensesdialog:licensesdialog:1.9.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0-alpha02'
+//    implementation project(':base')
+    implementation 'luyao.util.ktx:AndroidUtilKTX:0.0.5-alpha03'
+//    implementation project(path: ':ktx')
+}
+
