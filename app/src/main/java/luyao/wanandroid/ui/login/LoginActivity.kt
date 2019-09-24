@@ -17,6 +17,7 @@ import luyao.wanandroid.util.Preference
 /**
  * Created by Lu
  * on 2018/4/5 07:56
+ * 登录
  */
 class LoginActivity : BaseVMActivity<LoginViewModel>() {
 
